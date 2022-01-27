@@ -24,9 +24,6 @@ jobs:
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
-          id: ${{ '4A3E628A-693B-44C2-9130-50E83E2EAD12' }}
-          os: ${{ '15.2' }}
-          name: ${{ 'iPhone 12 Pro' }}
         run: |
           # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
           device=`xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}'`
@@ -38,9 +35,6 @@ jobs:
         env:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
-          id: ${{ '4A3E628A-693B-44C2-9130-50E83E2EAD12' }}
-          os: ${{ '15.2' }}
-          name: ${{ 'iPhone 12 Pro' }}
         run: |
           # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
           device=`xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}'`
