@@ -46,3 +46,15 @@ jobs:
           device: ${{'iPhone 13 Pro'}}
         run: |
            xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
+      - name: Build archive
+        run: |
+          xcodebuild -sdk iphoneos -project Demo_CICD.xcodeproj \
+          -configuration Release -scheme $default \
+          -derivedDataPath DerivedData \
+          -archivePath DerivedData/Archive/Demo_CICD archive
+      - name: Export Archive
+        run: |
+          xcodebuild -exportArchive \
+          -archivePath DerivedData/Archive/Demo_CICD.xcodeproj.xcarchive \
+          -exportOptionsPlist provisioning/App-Store.plist \
+          -exportPath DerivedData/ipa
