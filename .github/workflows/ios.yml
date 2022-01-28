@@ -32,9 +32,16 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
-      - name: Test 
+      - name: Unit Test 
         env: 
           scheme: ${{'Demo_CICD_UnitTests'}}
+          platform: ${{ 'iOS Simulator' }}
+          device: ${{'iPhone 13 Pro'}}
+        run: |
+           xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
+      - name: UI Test 
+        env: 
+          scheme: ${{'Demo_CICD UITests'}}
           platform: ${{ 'iOS Simulator' }}
           device: ${{'iPhone 13 Pro'}}
         run: |
