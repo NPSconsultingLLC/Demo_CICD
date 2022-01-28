@@ -47,6 +47,7 @@ jobs:
 #         run: |
 #            xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
       - name: Build archive
-            scheme: ${{'default'}}
+        env:
+            scheme: ${{ 'default' }}
         run: |
-          xcodebuild -configuration Release -scheme $scheme archive 
+            xcodebuild -configuration Release -scheme $scheme archive 
