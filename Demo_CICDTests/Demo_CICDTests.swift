@@ -13,8 +13,8 @@ class Demo_CICDTests: XCTestCase {
         let emailValidator = EmailValidator()
         let validEmail = emailValidator.textFieldValidatorEmail("Nathan.Stryker@gmail.com")
         let badEmail = emailValidator.textFieldValidatorEmail("NotValidEmail")
-        XCTAssertTrue(badEmail)
-        XCTAssertFalse(validEmail)
+        XCTAssertTrue(validEmail)
+        XCTAssertFalse(badEmail)
         //testing 
     }
 }
