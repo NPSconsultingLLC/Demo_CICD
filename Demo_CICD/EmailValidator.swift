@@ -7,7 +7,7 @@
 
 import Foundation
 
-class emailValidator {
+class EmailValidator {
     
     func textFieldValidatorEmail(_ string: String) -> Bool {
         if string.count > 100 {
