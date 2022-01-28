@@ -14,6 +14,7 @@
 		9710B9AB27A3394F00C77601 /* Demo_CICDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B9AA27A3394F00C77601 /* Demo_CICDTests.swift */; };
 		9710B9B527A3394F00C77601 /* Demo_CICDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B9B427A3394F00C77601 /* Demo_CICDUITests.swift */; };
 		9710B9B727A3394F00C77601 /* Demo_CICDUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B9B627A3394F00C77601 /* Demo_CICDUITestsLaunchTests.swift */; };
+		9710B9C427A44A9F00C77601 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B9C327A44A9F00C77601 /* EmailValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9710B9B027A3394F00C77601 /* Demo_CICDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo_CICDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9710B9B427A3394F00C77601 /* Demo_CICDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_CICDUITests.swift; sourceTree = "<group>"; };
 		9710B9B627A3394F00C77601 /* Demo_CICDUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_CICDUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9710B9C327A44A9F00C77601 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				9710B99927A3393D00C77601 /* Demo_CICDApp.swift */,
 				9710B99B27A3393D00C77601 /* ContentView.swift */,
+				9710B9C327A44A9F00C77601 /* EmailValidator.swift */,
 				9710B99D27A3394F00C77601 /* Assets.xcassets */,
 				9710B99F27A3394F00C77601 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				9710B99C27A3393D00C77601 /* ContentView.swift in Sources */,
 				9710B99A27A3393D00C77601 /* Demo_CICDApp.swift in Sources */,
+				9710B9C427A44A9F00C77601 /* EmailValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
