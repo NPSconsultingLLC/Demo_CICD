@@ -50,4 +50,4 @@ jobs:
         env:
             scheme: ${{ 'Demo_CICD' }}
         run: |
-            xcodebuild -configuration Release -scheme $scheme archive 
+            xcodebuild -configuration Release -scheme $scheme archive -allowProvisioningUpdates
