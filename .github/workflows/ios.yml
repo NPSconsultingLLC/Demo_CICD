@@ -48,10 +48,10 @@ jobs:
            xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
       - name: AppCenter Upload
         uses: wzieba/AppCenter-Github-Action@v1.3.2
-          with:
-            appName: DemoApp/Demo_CICD
-            token: ${{secrets.APPCENTERTOKEN}}
-            group: Testers
+        with:
+          appName: DemoApp/Demo_CICD
+          token: ${{secrets.APPCENTERTOKEN}}
+          group: Testers
       #   file: app/build/outputs/apk/release/app-release-unsigned.apk
       #   notifyTesters: true
       #   debug: false
