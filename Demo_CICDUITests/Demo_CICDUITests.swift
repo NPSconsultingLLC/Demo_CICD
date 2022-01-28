@@ -8,6 +8,7 @@
 import XCTest
 
 class Demo_CICDUITests: XCTestCase {
+    
     func testBadLogin() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
@@ -35,14 +36,5 @@ class Demo_CICDUITests: XCTestCase {
         let successLogin = app.staticTexts["Login succeeded!"]
         XCTAssertEqual(failedLogin.exists, false)
         XCTAssertEqual(successLogin.exists, true)
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
     }
 }
