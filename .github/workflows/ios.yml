@@ -37,5 +37,6 @@ jobs:
           scheme: ${{'Demo_CICD_UnitTests'}}
           platform: ${{ 'iOS Simulator' }}
           device: ${{'iPhone 13 Pro'}}
-          run: |
-          xcodebuild Test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
+        run: |
+           xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
+         
