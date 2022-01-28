@@ -41,7 +41,7 @@ jobs:
            xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
       - name: UI Test 
         env: 
-          scheme: ${{'Demo_CICD_UITests'}}
+          scheme: ${{'Demo_CICD_UITest'}}
           platform: ${{ 'iOS Simulator' }}
           device: ${{'iPhone 13 Pro'}}
         run: |
