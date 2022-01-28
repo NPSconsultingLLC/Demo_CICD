@@ -48,4 +48,4 @@ jobs:
 #            xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
       - name: Build archive
         run: |
-          xcodebuild -configuration Release -scheme $default -archivePath Demo_CICD archive
+          xcodebuild -configuration Release -scheme $default -archivePath /Demo_CICD archive
