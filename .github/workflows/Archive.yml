@@ -52,9 +52,5 @@ jobs:
         env:
             scheme: ${{ 'Demo_CICD' }}
         run: |
-            echo $PWD
-            ls
-            cd ..
-            ls 
-            xcodebuild -exportArchive -archivePath /demo/Demo_CICD.archive -exportPath /demo/demoIPA -exportOptionsPlist ExportOptions.plist
+            xcodebuild -exportArchive -exportPath /demo/demoIPA -exportOptionsPlist ExportOptions.plist
 
