@@ -1,4 +1,4 @@
-name: Run Unit Tests
+name: Run UI Tests
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build Pull Request 
+    name: Run UI Tests
     runs-on: macos-latest
 
     steps:
@@ -21,9 +21,9 @@ jobs:
           echo $default | cat >default
           echo Using default scheme: $default
 
-      - name: Unit Test 
+      - name: UI Test 
         env: 
-          scheme: ${{'Demo_CICD_UnitTests'}}
+          scheme: ${{'Demo_CICD_UITest'}}
           platform: ${{ 'iOS Simulator' }}
           device: ${{'iPhone 13 Pro'}}
         run: |
