@@ -52,5 +52,9 @@ jobs:
         env:
             scheme: ${{ 'Demo_CICD' }}
         run: |
-            xcodebuild -exportArchive -archivePath ./demo/Demo_CICD.xcarchive -exportPath /demo/demoIPA.ipa -exportOptionsPlist ExportOptions.plist
+            xcodebuild -exportArchive \
+            -archivePath ./demo/Demo_CICD.xcarchive \
+            -exportPath /demo/demoIPA.ipa \
+            -exportOptionsPlist ExportOptions.plist \
+            PROVISIONING_PROFILE={58880de9-bae1-4260-94e2-8fd5e5704706} 
 
