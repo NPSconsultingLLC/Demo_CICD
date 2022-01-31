@@ -46,7 +46,6 @@ jobs:
         run: |
             xcodebuild \
             -configuration Release \
-            -archivePath ./demo/Demo_CICD.xcarchive \
             archive 
 
       - name: Build IPA
