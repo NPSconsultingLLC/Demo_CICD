@@ -56,6 +56,7 @@ jobs:
 
       - name: Build IPA
         run: |
+            plutil -p exportOptions.plist
             xcodebuild \
             -configuration Release \
             -exportArchive \
