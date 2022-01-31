@@ -60,5 +60,5 @@ jobs:
             -exportArchive \
             -archivePath ./demo/Demo_CICD.xcarchive \
             -exportPath /demo/demoIPA.ipa \
-            -exportOptionsPlist ./ExportOptions.plist 
+            -exportOptionsPlist ./exportOptions.plist 
 
