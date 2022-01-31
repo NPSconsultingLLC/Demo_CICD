@@ -55,8 +55,12 @@ jobs:
             archive 
 
       - name: Build IPA
+        env:
+          scheme: ${{ 'Demo_CICD' }}
         run: |
             xcodebuild \
+            -scheme $scheme \
+            -configuration Release \
             -exportArchive \
             -archivePath ./demo/Demo_CICD.xcarchive \
             -exportPath /demo/demoIPA.ipa \
