@@ -55,16 +55,9 @@ jobs:
             archive 
 
       - name: Build IPA
-        env: 
-          BUILD_CERTIFICATE_BASE64: ${{ secrets.BUILD_CERTIFICATE_BASE64 }}
-          P12_PASSWORD: ${{ secrets.P12_PASSWORD }}
-          BUILD_PROVISION_PROFILE_BASE64: ${{ secrets.BUILD_PROVISION_PROFILE_BASE64 }}
-          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
         run: |
             xcodebuild \
             -exportArchive \
             -archivePath ./demo/Demo_CICD.xcarchive \
-            -exportPath /demo/demoIPA.ipa \
-            PROVISIONING_PROFILE=$BUILD_PROVISION_PROFILE_BASE64 \
-            -exportOptionsPlist ./ExportOptions.plist 
+            -exportPath /demo/demoIPA.ipa 
 
