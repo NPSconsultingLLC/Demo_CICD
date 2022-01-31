@@ -11,6 +11,7 @@ jobs:
     env:
       SCHEME: Demo_CICD
       BUILD_CONFIGURATION: Release
+      TEAM_ID: B53QXK3N3S
 
     steps:
       - name: Checkout
