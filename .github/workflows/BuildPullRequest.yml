@@ -1,8 +1,9 @@
 name: Pull Request Workflow
 
 on:
-  pull_request:
-    types: [ opened, reopened, edited ]
+  push:
+    pull_request:
+      types: [ opened, reopened, edited ]
 
 jobs:
   build:
