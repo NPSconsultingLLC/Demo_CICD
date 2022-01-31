@@ -8,10 +8,6 @@ jobs:
   build:
     name: Archive File on merge to Main 
     runs-on: macos-latest
-    env:
-      SCHEME: Demo_CICD
-      BUILD_CONFIGURATION: Release
-      TEAM_ID: B53QXK3N3S
 
     steps:
       - name: Checkout
@@ -48,24 +44,19 @@ jobs:
 
       - name: Build archive
         run: |
-
-          xcodebuild \
-          -scheme ${{ env.SCHEME }} \
-          -configuration ${{ env.BUILD_CONFIGURATION }} \
-          DEVELOPMENT_TEAM=${{ env.TEAM_ID }} \
-          -sdk 'iphoneos' -destination 'generic/platform=iOS' \
-          -archivePath build-output/app.xcarchive \
-          PROVISIONING_PROFILE=58880de9-bae1-4260-94e2-8fd5e5704706 \
-          clean \
-          archive \
-          CODE_SIGN_IDENTITY="iPhone Distribution: Nathan Stryker (B53QXK3N3S)"
+            xcodebuild \
+            -configuration Release \
+            -scheme $scheme \
+            -archivePath ./demo/Demo_CICD.xcarchive \
+            archive 
 
       - name: Build IPA
         run: |
+            plutil -p exportOptions.plist
             xcodebuild \
+            -configuration Release \
             -exportArchive \
-            PROVISIONING_PROFILE=58880de9-bae1-4260-94e2-8fd5e5704706 \
-            -archivePath build-output/app.xcarchive \
-            -exportPath build-output/ios \
+            -archivePath ./demo/Demo_CICD.xcarchive \
+            -exportPath /demo/demoIPA.ipa \
             -exportOptionsPlist exportOptions.plist 
 
