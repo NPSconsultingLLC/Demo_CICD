@@ -4,14 +4,14 @@
     <dict>
       <key>provisioningProfiles</key>
       <dict>
-        <key>com.strykeout.*</key>
-        <string>WildCard Cert</string>
+        <key>com.strykeout.Demo_CICD</key>
+        <string>d501484d-95bd-4834-a886-ca431b9854a3</string>
       </dict>
       <key>signingCertificate</key>
       <string>Apple Development</string>
       <key>signingStyle</key>
       <string>manual</string>
       <key>teamID</key>
-      <string>K6KR46EF23</string>
+      <string>B53QXK3N3S</string>
   </dict>
 </plist>
