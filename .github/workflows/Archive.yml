@@ -58,7 +58,8 @@ jobs:
       - name: Build IPA
         run: |
             xcodebuild \
-            -exportOptionsPlist ExportOptions.plist \
             -exportArchive \
             -archivePath ./demo/Demo_CICD.xcarchive \
-            -exportPath /demo/demoIPA.ipa 
+            -exportPath /demo/demoIPA.ipa \
+            -exportOptionsPlist ./ExportOptions.plist 
+
