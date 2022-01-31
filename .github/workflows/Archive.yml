@@ -47,12 +47,19 @@ jobs:
         env:
           scheme: ${{ 'Demo_CICD' }}
         run: |
-            xcodebuild -configuration Release -scheme $scheme -allowProvisioningUpdates -archivePath ./demo/Demo_CICD.xcarchive clean archive 
+            xcodebuild \
+            -configuration Release \
+            -scheme $scheme \
+            -allowProvisioningUpdates \
+            -archivePath ./demo/Demo_CICD.xcarchive \
+            clean \
+            archive 
 
       - name: Build IPA
         run: |
             xcodebuild -exportArchive \
             -archivePath ./demo/Demo_CICD.xcarchive \
             -exportPath /demo/demoIPA.ipa \
-            -exportOptionsPlist ExportOptions.plist
+            -exportOptionsPlist ExportOptions.plist \
+            -allowProvisioningUpdates
 
