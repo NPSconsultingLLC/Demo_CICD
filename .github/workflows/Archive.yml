@@ -50,7 +50,6 @@ jobs:
             xcodebuild \
             -configuration Release \
             -scheme $scheme \
-            -allowProvisioningUpdates \
             -archivePath ./demo/Demo_CICD.xcarchive \
             clean \
             archive 
@@ -61,5 +60,6 @@ jobs:
             -exportArchive \
             -archivePath ./demo/Demo_CICD.xcarchive \
             -exportPath /demo/demoIPA.ipa \
+            PROVISIONING_PROFILE=58880de9-bae1-4260-94e2-8fd5e5704706 \
             -exportOptionsPlist ./ExportOptions.plist 
 
