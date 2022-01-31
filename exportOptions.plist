@@ -4,7 +4,7 @@
 <dict>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.strykeout.Demo_CICD</key>
+		<key>com.strykeout.DemoCICD</key>
 		<string>58880de9-bae1-4260-94e2-8fd5e5704706</string>
 	</dict>
 	<key>method</key>
