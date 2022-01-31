@@ -46,7 +46,6 @@ jobs:
         run: |
             xcodebuild \
             -configuration Release \
-            -scheme $scheme \
             -archivePath ./demo/Demo_CICD.xcarchive \
             archive 
 
