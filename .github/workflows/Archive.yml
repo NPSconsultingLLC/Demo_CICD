@@ -43,9 +43,12 @@ jobs:
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
       - name: Build archive
+        env:
+          scheme: ${{ 'Demo_CICD' }}
         run: |
             xcodebuild \
             -configuration Release \
+            -scheme $scheme \
             -archivePath ./demo/Demo_CICD.xcarchive \
             archive 
 
