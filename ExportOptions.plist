@@ -2,16 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>provisioningProfiles</key>
+  <key>method</key>
+  <string>ad-hoc</string> <!-- app-store, ad-hoc, enterprise, development -->
+  <key>teamID</key>
+  <string>B53QXK3N3S</string>
+	<key>signingStyle</key>
+	<string>manual</string>
+  <key>provisioningProfiles</key>
 	<dict>
 		<key>com.strykeout.Demo_CICD</key>
 		<string>58880de9-bae1-4260-94e2-8fd5e5704706</string>
 	</dict>
-	<key>signingCertificate</key>
-	<string>iPhone Distribution: Nathan Stryker (B53QXK3N3S)</string>
-	<key>signingStyle</key>
-	<string>manual</string>
-	<key>teamID</key>
-	<string>B53QXK3N3S</string>
 </dict>
 </plist>
