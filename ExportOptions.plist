@@ -4,7 +4,7 @@
     <dict>
       <key>provisioningProfiles</key>
       <dict>
-        <key>com.strykeout.Demo_CICD</key>
+        <key>com.strykeout.*</key>
         <string>WildCard Cert</string>
       </dict>
       <key>signingCertificate</key>
