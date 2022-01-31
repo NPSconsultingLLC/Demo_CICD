@@ -2,11 +2,12 @@ name: Run UI Tests
 
 on:
   push:
-    branches: [ main ]
+    pull_request:
+      types: [ opened, reopened, edited ]
 
 jobs:
   build:
-    name: Run UI Tests
+    name: run UI Tests
     runs-on: macos-latest
 
     steps:
