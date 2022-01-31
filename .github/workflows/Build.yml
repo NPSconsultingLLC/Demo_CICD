@@ -1,4 +1,4 @@
-name: Build Workflow
+name: Archive Workflow
 
 on:
   push:
