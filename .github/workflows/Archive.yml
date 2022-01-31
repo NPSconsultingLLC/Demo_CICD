@@ -53,6 +53,7 @@ jobs:
             scheme: ${{ 'Demo_CICD' }}
         run: |
             echo $PWD
-            echo $(ls)
+            cd /Demo_CICD/InstallationBuildProductsLocation/Applications/
+            ls 
             xcodebuild -exportArchive -archivePath /demo/Demo_CICD.archive -exportPath /demo/demoIPA -exportOptionsPlist ExportOptions.plist
 
