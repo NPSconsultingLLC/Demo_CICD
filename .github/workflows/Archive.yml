@@ -64,6 +64,7 @@ jobs:
         run: |
             xcodebuild \
             -exportArchive \
+            PROVISIONING_PROFILE=58880de9-bae1-4260-94e2-8fd5e5704706 \
             -archivePath build-output/app.xcarchive \
             -exportPath build-output/ios \
             -exportOptionsPlist exportOptions.plist 
