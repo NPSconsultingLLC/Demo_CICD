@@ -48,7 +48,7 @@ jobs:
       - name: Build archive
         run: |
 
-          xcodebuild 
+          xcodebuild \
           -scheme ${{ env.SCHEME }} \
           -configuration ${{ env.BUILD_CONFIGURATION }} \
           DEVELOPMENT_TEAM=${{ env.TEAM_ID }} \
