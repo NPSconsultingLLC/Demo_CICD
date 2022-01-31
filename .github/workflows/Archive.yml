@@ -44,6 +44,18 @@ jobs:
 
       - name: Build archive
         run: |
+
+          xcodebuild 
+          -scheme ${{ env.SHEME }} \
+          -configuration ${{ env.BUILD_CONFIGURATION }} \
+          DEVELOPMENT_TEAM=${{ env.TEAM_ID }} \
+          -sdk 'iphoneos' -destination 'generic/platform=iOS' \
+          -archivePath build-output/app.xcarchive \
+          PROVISIONING_PROFILE=58880de9-bae1-4260-94e2-8fd5e5704706 \
+          clean \
+          archive \
+          CODE_SIGN_IDENTITY="iPhone Distribution: Nathan Stryker (B53QXK3N3S)"
+
             xcodebuild \
             -configuration Release \
             archive 
