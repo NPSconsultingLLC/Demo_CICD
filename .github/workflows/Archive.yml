@@ -85,6 +85,6 @@ jobs:
           appName: NPSConsultingLLC/Demo-CICD
           token: ${{secrets.APP_CENTER_TOKEN}}
           group: Collaborators
-          file: /home/runner/work/Demo_CICD/Demo_CICD/demoIPA.ipa
+          file: Demo_CICD.ipa
           notifyTesters: true
           debug: true
