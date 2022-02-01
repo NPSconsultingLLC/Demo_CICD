@@ -54,21 +54,32 @@ jobs:
 
       - name: Build IPA
         run: |
-            plutil -p exportOptions.plist
             xcodebuild \
             -configuration Release \
             -exportArchive \
             -archivePath ./demo/Demo_CICD.xcarchive \
-            -exportPath ./demo/demoIPA.ipa \
+            -exportPath ./artifact/demoIPA.ipa \
             -exportOptionsPlist exportOptions.plist 
-
-      - name: upload artefact to App Center
-        uses: wzieba/AppCenter-Github-Action@v1
+      
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
         with:
-          appName: Demo_CICD
-          token: ${{secrets.APP_CENTER_TOKEN}}
-          group: Testers
-          file: ./demo/demoIPA.ipa
-          notifyTesters: true
-          debug: false
+          name: DemoIPA
+          path: ./artifact/demoIPA.ipa
+          retention-days: 5
+
+# jobs:
+#   deploy:
+#     name: Deploy
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: upload artefact to App Center
+#         uses: wzieba/AppCenter-Github-Action@v1
+#         with:
+#           appName: Demo_CICD
+#           token: ${{secrets.APP_CENTER_TOKEN}}
+#           group: Testers
+#           file: ./demo/demoIPA.ipa
+#           notifyTesters: true
+#           debug: false
 
