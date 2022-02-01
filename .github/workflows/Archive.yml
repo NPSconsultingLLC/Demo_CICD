@@ -80,7 +80,7 @@ jobs:
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: Demo-CICD
+          appName: NPSConsultingLLC/apps/Demo-CICD
           token: ${{secrets.APP_CENTER_TOKEN}}
           group: Testers
           file: ./artifact/demoIPA.ipa
