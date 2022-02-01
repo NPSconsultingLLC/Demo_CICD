@@ -68,18 +68,22 @@ jobs:
           path: ./artifact/demoIPA.ipa
           retention-days: 5
 
-# jobs:
-#   deploy:
-#     name: Deploy
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: upload artefact to App Center
-#         uses: wzieba/AppCenter-Github-Action@v1
-#         with:
-#           appName: Demo_CICD
-#           token: ${{secrets.APP_CENTER_TOKEN}}
-#           group: Testers
-#           file: ./demo/demoIPA.ipa
-#           notifyTesters: true
-#           debug: false
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: DemoIPA
+      - name: upload artefact to App Center
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: Demo_CICD
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: Testers
+          file: ./artifact/demoIPA.ipa
+          notifyTesters: true
+          debug: false
 
