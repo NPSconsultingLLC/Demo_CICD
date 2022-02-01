@@ -62,3 +62,13 @@ jobs:
             -exportPath ./demo/demoIPA.ipa \
             -exportOptionsPlist exportOptions.plist 
 
+      - name: upload artefact to App Center
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: Demo_CICD
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: Testers
+          file: ./demo/demoIPA.ipa
+          notifyTesters: true
+          debug: false
+
