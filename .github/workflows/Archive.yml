@@ -6,7 +6,6 @@ on:
 
 jobs:
   job_1:
-    build:
       name: Archive File on merge to Main 
       runs-on: macos-latest
 
@@ -70,7 +69,6 @@ jobs:
             retention-days: 5
 
   job_2:
-    deploy:
       name: Deploy
       runs-on: ubuntu-latest
       steps:
