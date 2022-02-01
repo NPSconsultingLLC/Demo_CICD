@@ -79,8 +79,8 @@ jobs:
           name: DemoIPA
           path: /artifact
       - name: Display structure of downloaded files
-          run: ls -R
-          working-directory: /artifact
+        run: ls -R
+        working-directory: /artifact
       - name: upload artefact to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
