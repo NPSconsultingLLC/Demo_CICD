@@ -85,4 +85,4 @@ jobs:
           group: Testers
           file: ./artifact/demoIPA.ipa
           notifyTesters: true
-          debug: false
+          debug: true
