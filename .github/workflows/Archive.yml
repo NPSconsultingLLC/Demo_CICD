@@ -82,7 +82,7 @@ jobs:
         with:
           appName: NPSConsultingLLC/apps/Demo-CICD
           token: ${{secrets.APP_CENTER_TOKEN}}
-          group: Testers
+          group: Collaborators
           file: ./artifact/demoIPA.ipa
           notifyTesters: true
           debug: true
