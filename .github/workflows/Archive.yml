@@ -86,4 +86,3 @@ jobs:
             file: ./artifact/demoIPA.ipa
             notifyTesters: true
             debug: false
-
