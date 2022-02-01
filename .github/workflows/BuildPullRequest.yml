@@ -57,7 +57,7 @@ jobs:
           run: |
              xcodebuild test -scheme "$scheme" -project Demo_CICD.xcodeproj -destination "platform=$platform,name=$device"
   job_3:
-      needs: [job_1, job_2]
+      needs: [job_1]
       name: run UI Tests
       runs-on: macos-latest
 
