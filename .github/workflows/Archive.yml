@@ -69,6 +69,7 @@ jobs:
             retention-days: 5
 
   job_2:
+    needs: job_1
       name: Deploy
       runs-on: ubuntu-latest
       steps:
