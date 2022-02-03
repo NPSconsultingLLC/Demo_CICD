@@ -35,7 +35,7 @@ jobs:
   job_2:
       needs: job_1
       name: run unit tests 
-      runs-on: macos-latest
+      runs-on: ubuntu-latest
 
       steps:
         - name: Checkout
