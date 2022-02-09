@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9710B99A27A3393D00C77601 /* Demo_CICDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B99927A3393D00C77601 /* Demo_CICDApp.swift */; };
-		9710B99C27A3393D00C77601 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B99B27A3393D00C77601 /* ContentView.swift */; };
+		9710B99C27A3393D00C77601 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B99B27A3393D00C77601 /* LoginView.swift */; };
 		9710B99E27A3394F00C77601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9710B99D27A3394F00C77601 /* Assets.xcassets */; };
 		9710B9A127A3394F00C77601 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9710B9A027A3394F00C77601 /* Preview Assets.xcassets */; };
 		9710B9AB27A3394F00C77601 /* Demo_CICDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9710B9AA27A3394F00C77601 /* Demo_CICDTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		9710B99627A3393D00C77601 /* Demo_CICD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_CICD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9710B99927A3393D00C77601 /* Demo_CICDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo_CICDApp.swift; sourceTree = "<group>"; };
-		9710B99B27A3393D00C77601 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9710B99B27A3393D00C77601 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9710B99D27A3394F00C77601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9710B9A027A3394F00C77601 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9710B9A627A3394F00C77601 /* Demo_CICDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo_CICDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				9710B99927A3393D00C77601 /* Demo_CICDApp.swift */,
-				9710B99B27A3393D00C77601 /* ContentView.swift */,
+				9710B99B27A3393D00C77601 /* LoginView.swift */,
 				9710B9C327A44A9F00C77601 /* EmailValidator.swift */,
 				9710B99D27A3394F00C77601 /* Assets.xcassets */,
 				9710B99F27A3394F00C77601 /* Preview Content */,
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9710B99C27A3393D00C77601 /* ContentView.swift in Sources */,
+				9710B99C27A3393D00C77601 /* LoginView.swift in Sources */,
 				9710B99A27A3393D00C77601 /* Demo_CICDApp.swift in Sources */,
 				9710B9C427A44A9F00C77601 /* EmailValidator.swift in Sources */,
 			);
