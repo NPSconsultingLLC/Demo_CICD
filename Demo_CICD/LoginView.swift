@@ -10,7 +10,7 @@ import SwiftUI
 let storedUsername = "OptumUser@optum.com"
 let storedPassword = "Test2Day"
 
-struct ContentView : View {
+struct LoginView : View {
     @State var username: String = ""
     @State var password: String = ""
     @State var authenticationDidFail: Bool = false
@@ -114,7 +114,7 @@ struct PasswordTextField: View {
 #if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView()
     }
 }
 #endif
