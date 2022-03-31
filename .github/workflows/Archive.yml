@@ -77,12 +77,20 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: DemoIPA
+  job_2:
+    needs: job_1
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: DemoIPA
       - name: upload artefact to App Center
-        uses: wzieba/AppCenter-Github-Action@v1
+        uses: vhsantos26/app-center-cli-action@v1
         with:
           appName: NPSConsultingLLC/Demo-CICD
           token: ${{secrets.APP_CENTER_TOKEN}}
           group: Collaborators
           file: Demo_CICD.ipa
           notifyTesters: true
-          debug: false
