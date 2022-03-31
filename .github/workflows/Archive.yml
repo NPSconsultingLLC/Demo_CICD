@@ -80,8 +80,5 @@ jobs:
       - name: upload artefact to App Center
         uses: vhsantos26/app-center-cli-action@v1
         with:
-          appName: NPSConsultingLLC/Demo-CICD
-          token: ${{secrets.APP_CENTER_TOKEN}}
-          group: Collaborators
-          file: Demo_CICD.ipa
-          notifyTesters: true
+          user_token: ${{secrets.APP_CENTER_TOKEN}}
+          command: appcenter distribute release --app NPSConsultingLLC/Demo-CICD --file Demo_CICD.ipa --group "Collaborators"
