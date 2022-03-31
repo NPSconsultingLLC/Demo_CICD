@@ -77,15 +77,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: DemoIPA
-  job_2:
-    needs: job_1
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: DemoIPA
       - name: upload artefact to App Center
         uses: vhsantos26/app-center-cli-action@v1
         with:
